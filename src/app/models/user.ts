@@ -1,30 +1,27 @@
-export interface RandomUser {
+export interface IUser {
   gender: string;
-  name: UserName;
-  location: UserLocation;
+  name: IName;
   email: string;
-  login: Credentials;
-  dob: Birthday;
-  registered: Registered;
+  id: IUserId;
+  picture: IPicture;
+  location: ILocation;
   phone: string;
   cell: string;
-  id: UserId;
-  pictures: Picture;
-  nat: string;
+  dob: IBirthday;
 }
 
-export interface UserId {
+export interface IUserId {
   name: string;
   value: string;
 }
 
-export interface UserName {
+export interface IName {
   title: string;
   first: string;
   last: string;
 }
 
-export interface UserLocation {
+export interface ILocation {
   street: string;
   city: string;
   state: string;
@@ -53,17 +50,17 @@ export interface Credentials {
   sha256: string;
 }
 
-export interface Birthday {
+export interface IBirthday {
   date: string;
   age: number;
 }
 
-export interface Registered {
+interface Registered {
   date: string;
   age: number;
 }
 
-export interface Picture {
+export interface IPicture {
   large: string;
   medium: string;
   thumbnail: string;

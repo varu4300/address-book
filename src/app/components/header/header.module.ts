@@ -1,22 +1,16 @@
+import { SharedService } from './../../services/shared/shared.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
-  declarations: [
-    HeaderComponent
-  ],
-  imports: [
-    CommonModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule
-  ],
+  declarations: [ HeaderComponent ],
+  imports: [ CommonModule ],
   exports: [
     HeaderComponent
   ],
-  providers: [],
+  providers: [
+    SharedService
+  ],
 })
 export class HeaderModule {}

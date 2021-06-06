@@ -1,0 +1,22 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  &.navbar-primary {
+    background-color: #424242;
+    color: #9e9e9e;
+  }
+}
+
+.back {
+  font-size: 42px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.navbar-title {
+  padding: 15px 15px;
+}

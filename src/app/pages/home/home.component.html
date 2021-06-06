@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="container">
+  <app-alpha-pagination [users]="users" ></app-alpha-pagination>
+  <app-list *ngFor="let char of chars">
+    <h3 #alphaHeaders *ngIf="(users | filter: char).length > 0" [id]="'#' + char">{{char}}</h3>
+    <app-list-item [role]="ListRole.LINK" [href]="'details/' + user.id.value" *ngFor="let user of users | filter: char">
+      <img class="image-avatar" [src]="user.picture.medium" />
+      <div class="user-details">
+        <h3>{{user.name.first}} {{user.name.last}}</h3>
+      </div>
+    </app-list-item>
+  </app-list>
+</div>
+

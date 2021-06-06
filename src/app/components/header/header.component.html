@@ -1,6 +1,4 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button>
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Address Book</span>
-</mat-toolbar>
+<nav class="navbar navbar-primary" >
+  <span *ngIf="page !== Page.HOME" class="material-icons back">keyboard_arrow_left</span>
+  <h2 class="navbar-title">Address Book</h2>
+</nav>
