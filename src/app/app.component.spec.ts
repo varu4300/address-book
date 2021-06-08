@@ -1,3 +1,5 @@
+import { DetailsModule } from './pages/details/details.module';
+import { HeaderModule } from './components/header/header.module';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
@@ -6,7 +8,9 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HeaderModule,
+        DetailsModule
       ],
       declarations: [
         AppComponent
@@ -29,7 +33,7 @@ describe('AppComponent', () => {
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('address-book app is running!');
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h2.navbar-title').textContent).toContain('Address Book');
   });
 });

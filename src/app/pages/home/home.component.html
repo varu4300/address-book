@@ -1,13 +1,17 @@
-<div class="container">
-  <app-alpha-pagination [users]="users" ></app-alpha-pagination>
-  <app-list *ngFor="let char of chars">
-    <h3 #alphaHeaders *ngIf="(users | filter: char).length > 0" [id]="'#' + char">{{char}}</h3>
-    <app-list-item [role]="ListRole.LINK" [href]="'details/' + user.id.value" *ngFor="let user of users | filter: char">
-      <img class="image-avatar" [src]="user.picture.medium" />
-      <div class="user-details">
-        <h3>{{user.name.first}} {{user.name.last}}</h3>
-      </div>
-    </app-list-item>
-  </app-list>
+<div class="container" [class.no-data-error]="!users || (users && users.length === 0)">
+    <div class="user-list-block" *ngIf="users && users.length > 0; else noData">
+        <app-alpha-pagination [users]="users"></app-alpha-pagination>
+        <app-list *ngFor="let char of chars">
+            <h3 #alphaHeaders *ngIf="(users | filter: char).length > 0" [id]="'#' + char">{{char}}</h3>
+            <app-list-item [role]="ListRole.LINK" [href]="'details/' + user.login.username" *ngFor="let user of users | filter: char">
+                <img class="image-avatar" [src]="user.picture.medium" />
+                <div class="user-details">
+                    <h3>{{user.name.first}} {{user.name.last}}</h3>
+                </div>
+            </app-list-item>
+        </app-list>
+    </div>
+    <ng-template #noData>
+        <h1 class="error-title">No data available</h1>
+    </ng-template>
 </div>
-

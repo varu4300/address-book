@@ -10,16 +10,11 @@ import { Helper } from 'src/app/helper';
 })
 export class AlphaPaginationComponent implements OnInit {
   @Input() users: User[] = [];
-  @Output() onClick = new EventEmitter<string>();
   alphas: string[] = [];
   constructor() { }
 
   ngOnInit(): void {
     this.alphas = Helper.generateAlphabet();
-  }
-
-  onChange(char: string) {
-    this.onClick.emit(char);
   }
 
 }

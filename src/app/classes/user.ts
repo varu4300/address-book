@@ -1,26 +1,19 @@
-import { IUser, IName, IUserId, IPicture, IBirthday, ILocation } from './../models/user';
+import { IUser, IName, IPicture, IUserInfo } from './../models/user';
 
 export class User implements IUser {
-  gender: string = '';
-  name: IName = {} as IName;
-  email: string = '';
-  id: IUserId = {} as IUserId;
-  picture: IPicture = {} as IPicture;
-  location: ILocation = {} as ILocation;
-  phone: string = '';
-  cell: string = '';
-  dob: IBirthday = {} as IBirthday;
+  name: IName;
+  email: string;
+  picture: IPicture;
+  phone: string;
+  login: IUserInfo;
 
-  constructor(user: IUser) {
-    this.gender = user.gender;
-    this.name = user.name;
-    this.email = user.email;
-    this.id = user.id;
-    this.picture = user.picture;
-    this.location = user.location;
-    this.phone = user.phone;
-    this.cell = user.cell;
-    this.dob = user.dob;
+  constructor(name: IName = {} as IName, email: string = '',  picture: IPicture = {} as IPicture,  phone: string = '', login: IUserInfo = {} as IUserInfo)  {
+    this.name = name;
+    this.email = email;
+    this.picture =  picture;
+    this.phone =  phone;
+    this.login = login;
   }
 
 }
+

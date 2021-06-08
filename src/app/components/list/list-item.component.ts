@@ -1,7 +1,6 @@
-import { Router } from '@angular/router';
-import { ListRole } from './../../enum';
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/classes/user';
+import { ListRole } from './../../enum';
 
 @Component({
   selector: 'app-list-item',
@@ -17,8 +16,7 @@ export class ListItemComponent implements OnInit {
   @Input() user: User = {} as User;
   ListRole = ListRole;
 
-
-  constructor(private _router: Router) {}
+  constructor() {}
 
   ngOnInit() {}
 

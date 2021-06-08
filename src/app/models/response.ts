@@ -1,6 +1,6 @@
-export interface Response<T> {
-  results: T;
-  info:Info;
+export interface IResponse<T> {
+  results: T | null;
+  info: Info | null;
 }
 
 export interface Info {

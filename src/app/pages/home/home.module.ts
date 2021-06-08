@@ -6,6 +6,7 @@ import { SharedService } from 'src/app/services/shared/shared.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListModule } from '../../components/list/list.module';
 import { AlphaPaginationModule } from 'src/app/components/alpha-pagination/alpha-pagination.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AlphaPaginationModule } from 'src/app/components/alpha-pagination/alpha
     HttpClientModule,
     ListModule,
     AlphaPaginationModule,
-    FilterModule
+    FilterModule,
+    RouterModule.forRoot([]),
   ],
   exports: [
   ],

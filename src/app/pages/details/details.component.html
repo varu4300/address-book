@@ -1,1 +1,17 @@
-<p>details works!</p>
+<div class="profile-container">
+    <div class="profile-block" *ngIf="user">
+        <img class="image-avatar-large" [src]="user.picture.large" />
+        <h2>{{user.name.first}} {{user.name.last}}</h2>
+        <hr />
+        <div class="contact-block">
+            <p class="detail-block">
+                <span class="material-icons">email</span>
+                <span>{{user.email}}</span>
+            </p>
+            <p class="detail-block">
+                <span class="material-icons">call</span>
+                <span>{{user.phone}}</span>
+            </p>
+        </div>
+    </div>
+</div>
