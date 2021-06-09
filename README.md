@@ -57,3 +57,5 @@ For this project, the following assumptions are made:
 - If you do not have `live-server`, I recommend installing it, [live-server](https://www.npmjs.com/package/live-server)
 - Project should start
 
+# Deployment to Heroku
+- Once a feature or bug branch is pushed to develop branch, a automated deployment should trigger to the develop environment
