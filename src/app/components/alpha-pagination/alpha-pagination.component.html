@@ -1,0 +1,14 @@
+<div class="alpha-pagination-container">
+    <ng-container *ngIf="users && users.length > 0">
+        <div *ngFor="let alpha of alphas" class="char-container">
+
+            <a *ngIf="(users | filter: alpha).length > 0; else inactive" class="char-link active" [href]="'#' + alpha">{{alpha}}</a>
+
+            <ng-template #inactive>
+                <a class="char-link disabled" href="#">{{alpha}}</a>
+            </ng-template>
+        </div>
+    </ng-container>
+
+
+</div>

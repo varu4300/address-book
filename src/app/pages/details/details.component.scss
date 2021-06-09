@@ -1,0 +1,22 @@
+.profile-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    .profile-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.contact-block {
+    .detail-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 16px;
+    }
+}

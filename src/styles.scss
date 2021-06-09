@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Helvetica Neue", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.container {
+    padding: 0 16px;
+    &.no-data-error {
+        height: calc(100vh - 60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.image-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.image-avatar-large {
+    border-radius: 50%;
+}
+
+.error-title {
+    color: #d0d0d0;
+}
