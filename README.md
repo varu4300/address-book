@@ -52,7 +52,8 @@ For this project, the following assumptions are made:
 
 # Running in production
 - In your terminal in the root of the project run `ng build --prod`
-- In your terminal change directories to the build folder in the root of your project, `cd /path/to/project/build`
-- In your terminal in the root of the build folder run the command `live-server`
+- In your terminal change directories to the dist folder in the root of your project, `cd /path/to/project/dist/address-book`
+- In your terminal in the root of the address-book folder run the command `live-server`
+- If you do not have `live-server`, I recommend installing it, [live-server](https://www.npmjs.com/package/live-server)
 - Project should start
 
