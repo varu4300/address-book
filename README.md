@@ -55,7 +55,8 @@ For this project, the following assumptions are made:
 - In your terminal change directories to the dist folder in the root of your project, `cd /path/to/project/dist/address-book`
 - In your terminal in the root of the address-book folder run the command `live-server`
 - If you do not have `live-server`, I recommend installing it, [live-server](https://www.npmjs.com/package/live-server)
-- Project should start
 
 # Deployment to Heroku
 - Once a feature or bug branch is pushed to develop branch, a automated deployment should trigger to the develop environment
+- A view items were changed in the `package.json` file to make deployment possible, in the scripts properties, the `start: ng serve` was changed to `start: node server.js`
+
