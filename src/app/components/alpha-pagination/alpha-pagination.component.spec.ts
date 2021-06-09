@@ -58,6 +58,7 @@ describe('AlphaPaginationComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('.char-link.active').textContent).toContain('A')
   })
+
   it('should have disabled link of C', () => {
     component.users = users;
     component.ngOnInit();
